@@ -5,6 +5,7 @@ import pyttsx3
 if __name__ == "__main__":
     book = EPUBReader("the_book_about_hackers.epub")
     book_text = book.convert()
+    print(book_text)
 
     speaker = pyttsx3.init()
     # voices = speaker.getProperty("voices")

@@ -53,6 +53,8 @@ class EPUBReader:
 
     def convert(self):
         text = self.epub2text(self.file_name)
-        for chapter in text:
-            chapter = chapter.replace('\n', '').replace('\xa0-', '')
+        # for chapter in text:
+        #     chapter = chapter.replace('\n', '').replace('\xa0-', '')
+        for i in range(len(text)):
+            text[i] = text[i].replace('\n', '').replace('\xa0', '')
         return text
